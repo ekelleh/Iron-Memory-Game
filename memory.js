@@ -6,9 +6,8 @@ shuffle();
 assignImages();
 setCardClickListener();
 
-// 0. on a card click, check if that card is already visible from the history
-// 1. on a card click, add that card DOM element to your active Cards
-// 2. on a second card click, add that also to your activeCards Array
+// 0. on a card click, check if that card is already visible from the history DONE
+// 1. on a card click, add that card DOM element to your active Cards Done
 // 3. Select the front element inside each of the cards and compare the background image
 // 3.1. if they match, increase an imaginary score and dont turn them back
 // 3.2. if they don't match, turn both cards background
@@ -31,10 +30,10 @@ function rotateCard(card) {
 }
 
 function cardClickHandler(card) {
-    rotateCard(card);
     if (cardIsVisible(card)) {
     } else {
         rotateCard(card);
+        activeCards.push(card);
     }
 }
 
